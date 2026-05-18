@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="haven.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d2d7229923.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <a class="navbar-brand" href="#sectionHome" onclick="display('sectionHome')"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" style=" background-color:#059669; color:white;border-radius:5px; padding:7px;" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" aria-hidden="true" class="lucide lucide-home">
+                    <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                    <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><span class="logo-name" href="#sectionHome">Haven</span>
+                </svg></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav font">
+                    <a class="nav-link" href="#">Buy <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Rent</a>
+                    <a class="nav-link" href="#">Sell</a>
+                    <a class="nav-link" href="#">Agents</a>
+                    <a class="nav-link" href="#">My Dashboard</a>
+                    <hr class="line" />
+                    <a class="nav-link" href="#">Sign In</a>
+                    <a class="nav-link" href="#"><button class="button">List Property</button></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="home-page pb-5" id="sectionHome">
+        <h1 class="">Find Your Dream Home </h1>
+        <p>Discover exceptional properties in the most desirable
+            neighborhoods. Your perfect home awaits.</p>
+        <div class="info-tabs">
+            <div class="card text-center">
+                <div class="card-header" style="font-family:'Roboto';">
+                    <ul class="nav nav-tabs card-header-tabs nav-justified">
+                        <li class="nav-item">
+                            <a class="nav-link active " data-toggle="tab" href="#">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " data-toggle="tab" href="#">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " data-toggle="tab" href="#">Sold</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body">
+                    <div class="search-input-wrapper">
+                        <div class="input-box mb-3">
+                            <span class="emoji"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                </svg></span>
+                            <input type="text" class="form-control" placeholder="City, neighborhood, or ZIP">
+                        </div>
+                        <select class="form-control mb-3">
+                            <option>Price Range</option>
+                        </select>
+                        <select class="form-control mb-3">
+                            <option>Property Type</option>
+                        </select>
+                        <button class="btn btn-success btn-block" onclick="display('sectionSale')">
+                            Search
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="d-flex flex-row row">
+                <div class="col-4">
+                    <h1 style="font-size:25px;">15K+</h1>
+                    <p style="font-size:12px;">Active Listing</p>
+                </div>
+                <div class="col-4">
+                    <h1 style="font-size:25px;">50K+</h1>
+                    <p style="font-size:12px;">Happy Clients</p>
+                </div>
+                <div class="col-4">
+                    <h1 style="font-size:25px;">200+</h1>
+                    <p style="font-size:12px;">Expert Agents</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="explore">
+        <h2>Explore Top Cities</h2>
+        <p class="grey">Discover properties in America's most sought-after locations</p>
+        <div class="container">
+            <div class="cards row">
+                <div class=" d-flex flex-row justify-content-center">
+                    <div class="card1 col-6">
+                        <h3 class=" shadow">New York</h3>
+                        <p class="grey ">2,543 properties</p>
+                    </div>
+                    <div class="card2 col-6 ml-4">
+                        <h3 class=" shadow">Los Angeles</h3>
+                        <p class="grey ">1,876 properties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="listed p-3">
+        <div class="">
+            <h2>Just Listed</h2>
+            <p class="grey">Be the first to see the newest homes on the market</p>
+        </div>
+        <div class="Lists">
+            <div id="setion1"><img src=""></div>
+        </div>
+    </div>
+    <div class="align d-flex flex-column justify-content-center">
+        <h2>Why Choose Haven</h2>
+        <p class="grey">We're committed to making your real estate journey seamless and successful</p>
+        <div class="choose d-flex flex-column justify-content-center">
+            <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" style="color: #059669;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="shield" aria-hidden="true" class="lucide lucide-shield">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                </svg></div>
+            <h4>Trusted & Verified</h4>
+            <p class="grey" style="font-size:15px;">All listings are verified by our team to ensure accuracy and legitimacy.</p>
+        </div>
+        <div class="choose">
+            <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" style="color: #059669;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="users" aria-hidden="true" class="lucide lucide-users">
+                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                    <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                </svg></div>
+            <h4>Expert Agents</h4>
+            <p class="grey" style="font-size:15px;">Work with top-rated agents who know the local market inside and out.</p>
+        </div>
+        <div class="choose">
+            <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" style="color: #059669;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="trending-up" aria-hidden="true" class="lucide lucide-trending-up">
+                    <path d="M16 7h6v6"></path>
+                    <path d="m22 7-8.5 8.5-5-5L2 17"></path>
+                </svg></div>
+            <h4>Market Insights</h4>
+            <p class="grey" style="font-size:15px;">Access real-time data and trends to make informed decisions.</p>
+        </div>
+        <div class="choose">
+            <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" style="color: #059669;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="clock" aria-hidden="true" class="lucide lucide-clock">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M12 6v6l4 2"></path>
+                </svg></div>
+            <h4>24/7 Support</h4>
+            <p class="grey" style="font-size:15px;">Our dedicated team is here to help you every step of the way.</p>
+        </div>
+    </div>
+    <div class="second-last">
+        <h1 style="font-family: 'Playfair Display '; color:white;">Ready to Find Your Perfect Home?</h1>
+        <p style="color:#c2d1c6;">Join thousands of satisfied clients who found their dream
+            property with Haven. Our expert agents are ready to help
+            you every step of the way.</p>
+        <div class="btns d-flex flex-column"><button class="btn2 col-12">Browse Properties <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                </svg></button>
+            <button class="btn3 col-12">List Your Home</button>
+        </div>
+    </div>
+    <div class="last-sect">
+        <a class="navbar-brand" href="#sectionHome"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" style=" background-color:#059669; color:white;border-radius:5px; padding:7px;" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="home" aria-hidden="true" class="lucide lucide-home">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><span class="logo-name" style="color:white;">Haven</span>
+            </svg></a>
+        <div class="sub-sect pt-3">
+            <p style="color:#c2d1c6;">Your trusted partner in finding the perfect home.
+                We connect buyers, sellers, and renters with exceptional properties.</p>
+        </div>
+        <div class="sub-sect pt-4">
+            <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c2d1c6" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <p class="pl-2" style="color:#c2d1c6;">1-800-HAVEN</p>
+            </div>
+            <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c2d1c6" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+                </svg>
+                <p class="pl-2" style="color:#c2d1c6;">hello@haven.com</p>
+            </div>
+            <div class="d-flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#c2d1c6" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                    <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                    <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                </svg>
+                <p class="pl-2" style="color:#c2d1c6;">New York, NY</p>
+            </div>
+        </div>
+        <div class="sub-sect pt-4">
+            <h5>Resources</h5>
+            <p style="color:#c2d1c6;">real Estate News</p>
+            <p style="color:#c2d1c6;">Market Trends</p>
+            <p style="color:#c2d1c6;">Buyig Guide</p>
+            <p style="color:#c2d1c6;">Selling Guide</p>
+        </div>
+        <div class="sub-sect pt-4">
+            <h5>Company</h5>
+            <p style="color:#c2d1c6;">About Us</p>
+            <p style="color:#c2d1c6;">Careers</p>
+            <p style="color:#c2d1c6;">Press</p>
+            <p style="color:#c2d1c6;">Contact</p>
+        </div>
+        <div class="sub-sect pt-4 pb-4">
+            <h5>Legal</h5>
+            <p style="color:#c2d1c6;">Privacy Policy</p>
+            <p style="color:#c2d1c6;">terms of Service</p>
+            <p style="color:#c2d1c6;">Fair Housing</p>
+            <p style="color:#c2d1c6;">Accessibility</p>
+        </div>
+        <hr class="line">
+        <div style="color:#c2d1c6; text-align:center;font-size:14px;">
+            <p>&copy; 2024 Haven Real Estate. All rights reserved.</p>
+            <p>Equal Housing Opportunity</p>
+        </div>
+    </div>
+    <div id="sectionSale" class="ml-3">
+        <div class="container filter-bar-inner pt-4" style="position:fixed;top:50px;background-color:white;">
+            <button class="filter-btn" onclick="toggleFilter(this)">
+                Price
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </button>
+            <button class="filter-btn" onclick="toggleFilter(this)">
+                Beds
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </button>
+            <button class="filter-btn" onclick="toggleFilter(this)">
+                Baths
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </button>
+            <button class="filter-btn" onclick="toggleFilter(this)">
+                Home Type
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="chevron-down" aria-hidden="true" class="lucide lucide-chevron-down">
+                    <path d="m6 9 6 6 6-6"></path>
+                </svg>
+            </button>
+            <button class="filter-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="sliders-horizontal" aria-hidden="true" class="lucide lucide-sliders-horizontal">
+                    <path d="M10 5H3"></path>
+                    <path d="M12 19H3"></path>
+                    <path d="M14 3v4"></path>
+                    <path d="M16 17v4"></path>
+                    <path d="M21 12h-9"></path>
+                    <path d="M21 19h-5"></path>
+                    <path d="M21 5h-7"></path>
+                    <path d="M8 10v4"></path>
+                    <path d="M8 12H3"></path>
+                </svg>
+                More Filters
+            </button>
+        </div>
+        <h3 style="color:black;">Properties for Sale</h3>
+        <p style="font-size:16px;" class="grey">6 homes available</p>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="1234 Park Avenue">
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$2,450,000</h2>
+                <p class="pt-2" style="color:black;">1234 Park Avenue</p>
+                <p class="address">
+                    Beverly Hills
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 4 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 3.5 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 3,200 sqft</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800" alt="House">
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$1,875,000</h2>
+                <p class="pt-2" style="font-size:14px;color:black;">456 Wilshire Blvd</p>
+                <p class="address">
+                    Los Angeles, CA 90024
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 3 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 2.5 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 2,400 sqft</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800" alt="House">
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$3,200,000</h2>
+                <p class="pt-2" style="font-size:14px;color:black;">789 Ocean Drive</p>
+                <p class="address">
+                    Miami, FL 33139
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 5 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 4 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 4,100 sqft</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800" alt="321 Market Street">
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$8,500/mo</h2>
+                <p class="pt-2" style="font-size:14px;color:black;">321 Market Street</p>
+                <p class="address">
+                    San Francisco, CA 94105
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 2 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 2 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 1,450 sqft</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="567 Lincoln Park">
+                <span class="pending">pending</span>
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$1,875,000</h2>
+                <p class="pt-2" style="font-size:14px;color:black;">456 Wilshire Blvd</p>
+                <p class="address">
+                    Los Angeles, CA 90024
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 3 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 2.5 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 2,400 sqft</span>
+                </div>
+            </div>
+        </div>
+        <div class="property-card mb-3 shadow" onclick="display('sectionHome1')">
+            <div class="image-box">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="890 Beacon Hill">
+                <div class="heart">
+                    <button class="property-favorite " onclick="toggleFavorite(event, '2')"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                            <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="dots">
+                    <span class="active"></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>$4,500,000</h2>
+                <p class="pt-2" style="font-size:14px;color:black;">890 Beacon Hill</p>
+                <p class="address">
+                    Boston, MA 02108
+                </p>
+                <div class="card-icons">
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                            <path d="M2 4v16"></path>
+                            <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                            <path d="M2 17h20"></path>
+                            <path d="M6 8v9"></path>
+                        </svg> 6 bd</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                            <path d="M10 4 8 6"></path>
+                            <path d="M17 19v2"></path>
+                            <path d="M2 12h20"></path>
+                            <path d="M7 19v2"></path>
+                            <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                        </svg> 5 ba</span>
+                    <span class="pl-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                            <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                        </svg> 5,200 sqft</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionSarah">
+        <div class="container">
+            <div class="sarah">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400" alt="Sarah Mitchell">
+                <div class="verified-badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                </div>
+                <div class="agent-name">
+                    <h1>Sarah Mitchell</h1>
+                    <span class="verified-pill"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check-circle" aria-hidden="true" class="lucide lucide-check-circle">
+                            <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                            <path d="m9 11 3 3L22 4"></path>
+                        </svg> Verified</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sectionHome1">
+        <div class="page active" id="page-property">
+            <div class="container" style="background: #f8fafc; padding-bottom: 4rem;">
+                <span class="detail-back" onclick="display('sectionSale')">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="arrow-left" aria-hidden="true" class="lucide lucide-arrow-left">
+                        <path d="m12 19-7-7 7-7"></path>
+                        <path d="M19 12H5"></path>
+                    </svg>
+                    Back to listings
+                </span>
+
+                <div class="gallery-grid" id="property-gallery">
+                    <div class="gallery-main" onclick="openGalleryModal(0)">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800" alt="1234 Park Avenue">
+                        <button class="btn btn-secondary btn-sm gallery-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="expand" aria-hidden="true" class="lucide lucide-expand">
+                                <path d="m15 15 6 6"></path>
+                                <path d="m15 9 6-6"></path>
+                                <path d="M21 16v5h-5"></path>
+                                <path d="M21 8V3h-5"></path>
+                                <path d="M3 16v5h5"></path>
+                                <path d="m3 21 6-6"></path>
+                                <path d="M3 8V3h5"></path>
+                                <path d="M9 9 3 3"></path>
+                            </svg> View All Photos
+                        </button>
+                    </div>
+
+                    <div class="gallery-item" onclick="openGalleryModal(1)">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800" alt="1234 Park Avenue">
+
+                    </div>
+
+                    <div class="gallery-item" onclick="openGalleryModal(2)">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800" alt="1234 Park Avenue">
+
+                    </div>
+
+                    <div class="gallery-item" onclick="openGalleryModal(3)">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800" alt="1234 Park Avenue">
+
+                    </div>
+
+                </div>
+                <div class="detail-card">
+                    <div class="detail-header">
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
+                                <span style="color:black;font-size:26px;font-family:'Playfair Display', serif;">$2,450,000</span>
+
+                            </div>
+                            <div style="color:black;font-size:26px;font-family:'Roboto';">1234 Park Avenue</div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="map-pin" aria-hidden="true" class="lucide lucide-map-pin">
+                                    <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
+                                <span style="color:gray;">New York, NY 10028</span>
+                            </div>
+                        </div>
+                        <div class="detail-actions">
+                            <button class="btn btn-outline btn-icon" style="border-color:gray;border:1px;" onclick="toggleFavorite(event, '1')">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="heart" aria-hidden="true" class="lucide lucide-heart">
+                                    <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+                                </svg>
+                            </button>
+                            <button class="btn btn-outline btn-icon" style="border-color:gray;border:1px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="share-2" aria-hidden="true" class="lucide lucide-share-2">
+                                    <circle cx="18" cy="5" r="3"></circle>
+                                    <circle cx="6" cy="12" r="3"></circle>
+                                    <circle cx="18" cy="19" r="3"></circle>
+                                    <line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line>
+                                    <line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="quick-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                                <path d="M2 4v16"></path>
+                                <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                                <path d="M2 17h20"></path>
+                                <path d="M6 8v9"></path>
+                            </svg> 4 beds</span>
+                        <span class="quick-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                                <path d="M10 4 8 6"></path>
+                                <path d="M17 19v2"></path>
+                                <path d="M2 12h20"></path>
+                                <path d="M7 19v2"></path>
+                                <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                            </svg> 3.5 baths</span>
+                        <span class="quick-stat"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="gray" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                                <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                            </svg> 3,200 sqft</span>
+                    </div>
+                </div>
+
+                <div class="detail-card shadow m-3">
+                    <h2 class="detail-section-title">Property Details</h2>
+                    <div class="details-grid">
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bed" aria-hidden="true" class="lucide lucide-bed">
+                                    <path d="M2 4v16"></path>
+                                    <path d="M2 8h18a2 2 0 0 1 2 2v10"></path>
+                                    <path d="M2 17h20"></path>
+                                    <path d="M6 8v9"></path>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Bedrooms</div>
+                                <div class="detail-item-value">4</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="bath" aria-hidden="true" class="lucide lucide-bath">
+                                    <path d="M10 4 8 6"></path>
+                                    <path d="M17 19v2"></path>
+                                    <path d="M2 12h20"></path>
+                                    <path d="M7 19v2"></path>
+                                    <path d="M9 5 7.621 3.621A2.121 2.121 0 0 0 4 5v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5"></path>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Bathrooms</div>
+                                <div class="detail-item-value">3.5</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="square" aria-hidden="true" class="lucide lucide-square">
+                                    <rect width="18" height="18" x="3" y="3" rx="2"></rect>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Square Feet</div>
+                                <div class="detail-item-value">3,200</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar">
+                                    <path d="M8 2v4"></path>
+                                    <path d="M16 2v4"></path>
+                                    <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                    <path d="M3 10h18"></path>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Year Built</div>
+                                <div class="detail-item-value">2019</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="car" aria-hidden="true" class="lucide lucide-car">
+                                    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path>
+                                    <circle cx="7" cy="17" r="2"></circle>
+                                    <path d="M9 17h6"></path>
+                                    <circle cx="17" cy="17" r="2"></circle>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Parking</div>
+                                <div class="detail-item-value">1 spaces</div>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <div class="detail-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="building" aria-hidden="true" class="lucide lucide-building">
+                                    <path d="M12 10h.01"></path>
+                                    <path d="M12 14h.01"></path>
+                                    <path d="M12 6h.01"></path>
+                                    <path d="M16 10h.01"></path>
+                                    <path d="M16 14h.01"></path>
+                                    <path d="M16 6h.01"></path>
+                                    <path d="M8 10h.01"></path>
+                                    <path d="M8 14h.01"></path>
+                                    <path d="M8 6h.01"></path>
+                                    <path d="M9 22v-3a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"></path>
+                                    <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                                </svg></div>
+                            <div>
+                                <div class="detail-item-label">Property Type</div>
+                                <div class="detail-item-value">Condo</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="border-top: 1px solid #b3bbc7 ; margin-top: 1.5rem; padding-top: 1.5rem; display: flex; justify-content: space-between;">
+                        <span style="color:gray;">HOA Fees</span>
+                        <span style="font-weight: 500;">$1,850/month</span>
+                    </div>
+
+                </div>
+
+                <div class="detail-card shadow m-3">
+                    <h2 class="detail-section-title">About This Home</h2>
+                    <p style="color:gray;">Stunning modern residence in the heart of Manhattan's Upper East Side. This meticulously designed home features floor-to-ceiling windows, chef's kitchen with premium appliances, and breathtaking city views.</p>
+                </div>
+
+                <div class="detail-card p-2 shadow m-3">
+                    <h2 style="font-family:'Playfair';">Features &amp; Amenities</h2>
+                    <div class="features-grid">
+
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>Central Air</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>In-unit Laundry</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>Doorman</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>Gym</span>
+                        </div>
+
+                        <div class="feature-item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="check" aria-hidden="true" class="lucide lucide-check">
+                                <path d="M20 6 9 17l-5-5"></path>
+                            </svg>
+                            <span>Rooftop Access</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="agent-card" id="agent-card">
+                <div class="agent-card-inner">
+                    <div class="agent-info">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200" alt="Sarah Mitchell" class="agent-photo" onclick="navigateTo('agent')">
+                        <div>
+                            <div class="agent-name" style="cursor: pointer" onclick="navigateTo('agent')">Sarah Mitchell</div>
+                            <div class="agent-brokerage">Haven Premier</div>
+                        </div>
+                    </div>
+                    <div class="agent-buttons">
+                        <a href="tel:(212) 555-0123" class="btn btn-outline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="phone" aria-hidden="true" class="lucide lucide-phone">
+                                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                            </svg> Call</a>
+                        <a href="mailto:sarah@havenrealty.com" class="btn btn-outline"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="mail" aria-hidden="true" class="lucide lucide-mail">
+                                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            </svg> Email</a>
+                    </div>
+                    <div class="divider">
+                        <div class="divider-line"></div>
+                        <span class="divider-text">or schedule a tour</span>
+                    </div>
+                    <form class="tour-form" id="tour-form" onsubmit="handleTourSubmit(event)">
+                        <input type="text" class="form-input" placeholder="Your Name" required="" oninput="validateInput(this)">
+                        <input type="email" class="form-input" placeholder="Email Address" required="" oninput="validateInput(this)">
+                        <input type="tel" class="form-input" placeholder="Phone Number" required="" oninput="validateInput(this)">
+                        <textarea class="form-input form-textarea" placeholder="Message" required="" oninput="validateInput(this)">I'm interested in 1234 Park Avenue, New York</textarea>
+                        <button type="submit" class="btn btn-hero" style="width: 100%">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="calendar" aria-hidden="true" class="lucide lucide-calendar">
+                                <path d="M8 2v4"></path>
+                                <path d="M16 2v4"></path>
+                                <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+                                <path d="M3 10h18"></path>
+                            </svg> Request a Tour
+                        </button>
+                    </form>
+                    <p class="form-disclaimer">By submitting, you agree to our Terms and Privacy Policy.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="https://new-assets.ccbp.in/frontend/content/static-ccbp-ui-kit/static-ccbp-ui-kit.js"></script>
+</body>
+
+</html>
